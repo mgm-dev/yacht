@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1." />
+    <title>Online Yacht Sheet</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e2f73772ca.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- table -->
+      <div class="table-section">
+        <div class="turn-title">
+          Online Yacht Sheet
+        </div>
+        <table class="singles">
+          <th class="categories top">Categories</th>
+          <th class="top player-1 current-player fixed">1P</th>
+          <th class="top player-2 fixed">2P</th>
+          <th class="top player-3 fixed">3P</th>
+          <th class="top player-4 fixed">4P</th>
+          <tr>
+            <td class="categories"><i class="fas fa-dice-one"></i>Aces</td>
+            <td class="sub sum aces player-1 current-player"></td>
+            <td class="sub sum aces player-2"></td>
+            <td class="sub sum aces player-3"></td>
+            <td class="sub sum aces player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories"><i class="fas fa-dice-two"></i>Deuces</td>
+            <td class="sub sum deuces player-1 current-player"></td>
+            <td class="sub sum deuces player-2"></td>
+            <td class="sub sum deuces player-3"></td>
+            <td class="sub sum deuces player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories"><i class="fas fa-dice-three"></i>Threes</td>
+            <td class="sub sum threes player-1 current-player"></td>
+            <td class="sub sum threes player-2"></td>
+            <td class="sub sum threes player-3"></td>
+            <td class="sub sum threes player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories"><i class="fas fa-dice-four"></i>Fours</td>
+            <td class="sub sum fours player-1 current-player"></td>
+            <td class="sub sum fours player-2"></td>
+            <td class="sub sum fours player-3"></td>
+            <td class="sub sum fours player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories"><i class="fas fa-dice-five"></i>Fives</td>
+            <td class="sub sum fives player-1 current-player"></td>
+            <td class="sub sum fives player-2"></td>
+            <td class="sub sum fives player-3"></td>
+            <td class="sub sum fives player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories"><i class="fas fa-dice-six"></i>Sixes</td>
+            <td class="sub sum sixes player-1 current-player"></td>
+            <td class="sub sum sixes player-2"></td>
+            <td class="sub sum sixes player-3"></td>
+            <td class="sub sum sixes player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories subtotal">Subtotal</td>
+            <td class="subtotal player-1 current-player fixed"></td>
+            <td class="subtotal player-2 fixed"></td>
+            <td class="subtotal player-3 fixed"></td>
+            <td class="subtotal player-4 fixed"></td>
+          </tr>
+          <tr>
+            <td class="categories bonus">+35 Bonus</td>
+            <td class="sum bonus player-1 current-player fixed">0</td>
+            <td class="sum bonus player-2 fixed">0</td>
+            <td class="sum bonus player-3 fixed">0</td>
+            <td class="sum bonus player-4 fixed">0</td>
+          </tr>
+        </table>
+        <p class="bonus-description">
+          Bonus if &nbsp; <i class="fas fa-dice-one"></i> -
+          <i class="fas fa-dice-six"></i>
+          are over 63 points
+        </p>
+        <table class="choice">
+          <tr>
+            <td class="categories">Choice</td>
+            <td class="sum choice player-1 current-player"></td>
+            <td class="sum choice player-2"></td>
+            <td class="sum choice player-3"></td>
+            <td class="sum choice player-4"></td>
+          </tr>
+        </table>
+        <table class="hands">
+          <tr>
+            <td class="categories">4 of a Kind</td>
+            <td class="sum four-of-kind player-1 current-player"></td>
+            <td class="sum four-of-kind player-2"></td>
+            <td class="sum four-of-kind player-3"></td>
+            <td class="sum four-of-kind player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories">Full House</td>
+            <td class="sum full-house player-1 current-player"></td>
+            <td class="sum full-house player-2"></td>
+            <td class="sum full-house player-3"></td>
+            <td class="sum full-house player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories">S. Straight</td>
+            <td class="sum small-straight player-1 current-player"></td>
+            <td class="sum small-straight player-2"></td>
+            <td class="sum small-straight player-3"></td>
+            <td class="sum small-straight player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories">L. Straight</td>
+            <td class="sum large-straight player-1 current-player"></td>
+            <td class="sum large-straight player-2"></td>
+            <td class="sum large-straight player-3"></td>
+            <td class="sum large-straight player-4"></td>
+          </tr>
+          <tr>
+            <td class="categories">Yacht</td>
+            <td class="sum yacht player-1 current-player"></td>
+            <td class="sum yacht player-2"></td>
+            <td class="sum yacht player-3"></td>
+            <td class="sum yacht player-4"></td>
+          </tr>
+        </table>
+        <table class="total">
+          <tr>
+            <td class="categories top">Total</td>
+            <td class="total player-1 fixed current-player"></td>
+            <td class="total player-2 fixed"></td>
+            <td class="total player-3 fixed"></td>
+            <td class="total player-4 fixed"></td>
+          </tr>
+        </table>
+
+        <!-- input -->
+        <div class="selects">
+          <select name="player-select" id="player-select">
+            <option value="1">1P</option>
+            <option value="2">2P</option>
+            <option value="3">3P</option>
+            <option value="4">4P</option>
+          </select>
+          <select class="dice" name="dice-1" id="dice-1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+
+          <select class="dice" name="dice-2" id="dice-2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+
+          <select class="dice" name="dice-3" id="dice-3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+
+          <select class="dice" name="dice-4" id="dice-4">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+
+          <select class="dice" name="dice-5" id="dice-5">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
