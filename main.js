@@ -152,14 +152,21 @@ function calcSmallStraight() {
     .map((dice) => parseInt(dice.value))
     .reduce((acc, curr) => (acc.includes(curr) ? acc : [...acc, curr]), [])
     .sort((a, b) => a - b);
+
+  console.log(uniqueNumberArray);
   if (uniqueNumberArray.length < 4) {
     console.log('fail');
     return 0;
   }
+
+  const difCnt = 0;
   for (let i = 0; i < uniqueNumberArray.length - 1; i++) {
     const dif = uniqueNumberArray[i + 1] - uniqueNumberArray[i];
     if (dif != 1) {
-      return 0;
+      difCnt++;
+      if (difCnt > 1) {
+        return 0;
+      }
     }
   }
   return 15;
